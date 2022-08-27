@@ -40,10 +40,10 @@ public class BotClient extends Client {
         protected void processIncomingMessage(String message) {
             Calendar calendar = new GregorianCalendar();
             
-            SimpleDateFormat date = new SimpleDateFormat("d.MM.YYYY");
+            SimpleDateFormat date = new SimpleDateFormat("d.MM.yyyy");
             SimpleDateFormat day = new SimpleDateFormat("d");
             SimpleDateFormat month = new SimpleDateFormat("MMMM");
-            SimpleDateFormat year = new SimpleDateFormat("YYYY");
+            SimpleDateFormat year = new SimpleDateFormat("yyyy");
             SimpleDateFormat time = new SimpleDateFormat("H:mm:ss");
             SimpleDateFormat hour = new SimpleDateFormat("H");
             SimpleDateFormat minutes = new SimpleDateFormat("m");

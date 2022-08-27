@@ -1,12 +1,12 @@
 package com.chat.chat_mvc_swing.client;
 
 public class ClientGuiController extends Client {
-    private ClientGuiModel model = new ClientGuiModel();
-    private ClientGuiView view = new ClientGuiView(this);
+    private final ClientGuiModel model = new ClientGuiModel();
+    private final ClientGuiView view = new ClientGuiView(this);
 
     @Override
     public void run() {
-        getSocketThread().run();
+        getSocketThread().start();
     }
 
     @Override

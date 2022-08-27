@@ -1,19 +1,15 @@
 package com.chat.chat_mvc_swing.client;
 
-import com.chat.chat_mvc_swing.client.ClientGuiController;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class ClientGuiView {
     private final ClientGuiController controller;
 
-    private JFrame frame = new JFrame("Чат");
-    private JTextField textField = new JTextField(50);
-    private JTextArea messages = new JTextArea(10, 50);
-    private JTextArea users = new JTextArea(10, 10);
+    private final JFrame frame = new JFrame("Чат");
+    private final JTextField textField = new JTextField(50);
+    private final JTextArea messages = new JTextArea(10, 50);
+    private final JTextArea users = new JTextArea(10, 10);
 
     public ClientGuiView(ClientGuiController controller) {
         this.controller = controller;
@@ -32,11 +28,9 @@ public class ClientGuiView {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 
-        textField.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                controller.sendTextMessage(textField.getText());
-                textField.setText("");
-            }
+        textField.addActionListener(e -> {
+            controller.sendTextMessage(textField.getText());
+            textField.setText("");
         });
     }
 
